@@ -3,110 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 15px;
-      line-height: 1.2;
-    }
-    header, section, footer {
-      margin-bottom: 10px;
-    }
-    h1, h2, h3 {
-      margin-bottom:0px;
-      color: #b53030;
-      text-align: center;
-    }
-    ul {
-      padding-left: 15px;
-      margin:0
-    }
-    li { /*list or something */
-      margin-bottom: 5px;
-    }
-  </style>
+  <title>Ayshum Kashif - CV</title>
+  <!-- link to external CSS file -->
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+<body>
+    <!-- big white box around the whole cv -->
+  <div class="resume">
 
-  <header>
-    <h1>Ayshum Kashif</h1>
-    <p>COMSATS Lahore</p>
+        <!-- idher name, photo and tagline up top -->
+    <header>
+      <img src="photo.jpg" alt="Photo of Ayshum Kashif">
+      <h1>Ayshum Kashif</h1>
+      <p class="job-title">BSc Computer Science student focused on full-stack web development</p>
 
-    <ul>
-      <li>Phone: 03011223344</li>
-      <li>Location: Lahore, Pakistan</li>
-    </ul>
-    <ul>
-      <li><a href="mailto:ayshumbutt@example.com">Email</a></li>
-      <li><a href="https://github.com/repos">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/ayshum-kashif-123456789/">LinkedIn</a></li>
-    </ul>
-  </header>
-  <hr>
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Data Structures </li>
-      <li>Algorithms</li>
-      <li>Web Development</li>
-      
-    </ul>
-  </section>
+      <!-- links that jump down the page -->
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section>
-    <h2>Languages</h2>
-    <ul>
-      <li>English - Fluent</li>
-      <li>Urdu - Native</li>
-    </ul>
-  </section>
+    <main>
+      <!-- about me wala section  -->
+      <section class="section" id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate Computer Science undergraduate in my 5th semester. I've covered
+          the basics of programming, data structures, and algorithms, and I have a keen interest
+          in web development. I am eager to apply my knowledge to real-world projects.
+        </p>
+      </section>
 
-  <section>
-    <h2>Education</h2>
-    <p>
-      <strong>BS Computer Science</strong><br>
-      COMSATS University Islamabad<br>
-      2022 - 2026 (Expected)
-    </p>
-  </section>
+      <section class="section" id="education">
+        <h2>Education</h2>
+        <table>
+          <thead>
+            <tr><th>Degree</th><th>Institution</th><th>Years</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BS Computer Science</td>
+              <td>COMSATS University Islamabad, Lahore Campus</td>
+              <td>2022 - 2026 (Expected)</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-  <hr>
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Data Structures</li>
+          <li>Algorithms</li>
+          <li>Web Development</li>
+        </ul>
+        <h3>Languages</h3>
+        <ul>
+          <li>English - Fluent</li>
+          <li>Urdu - Native</li>
+        </ul>
+      </section>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am a passionate Computer Science undergraduate student in my 5th semester. I've covered
-      the integral basics of programming, data structures, and algorithms. I have a keen interest in web development
-      and have been actively working on projects to enhance my skills in this area. 
-      I am eager to apply my knowledge and contribute to real-world projects.
-    </p>
-  </section>
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+        <article class="entry">
+          <h3>Lahore Tourism App</h3>
+          <p>
+            A web application promoting tourism in Lahore, with information on attractions,
+            restaurants, and hotels, plus a map feature for navigation.
+          </p>
+        </article>
+        <article class="entry">
+          <h3>Online Bookstore</h3>
+          <p>
+            An online bookstore with user authentication, a shopping cart, and payment integration.
+          </p>
+          <p class="tech">HTML, CSS, JavaScript, backend framework</p>
+        </article>
+      </section>
 
-  <section>
-    <h2>Projects</h2>
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>Phone: 03011223344</li>
+          <li>Location: Lahore, Pakistan</li>
+          <li><a href="mailto:ayshumbutt@gmail.com">ayshumbutt@gmail.com</a></li>
+          <li><a href="https://github.com/ayshum">GitHub</a></li>
+          <li><a href="www.linkedin.com/in/ayshum-butt-8b3bb9350">LinkedIn</a></li>
+        </ul>
+      </section>
+    </main>
 
-    <article>
-      <h3>Lahore Tourism App</h3>
-      <p>
-        Developed a web application to promote tourism in Lahore.
-        The app provides information about tourist attractions, restaurants, and hotels.
-        It also includes a map feature to help users navigate the city.
-    </article>
-
-    <article>
-      <h3>Online Bookstore</h3>
-      <p>
-        Created an online bookstore where users can browse and purchase books.
-        The application includes features such as user authentication, shopping cart, and payment integration.
-        It was built using HTML, CSS, JavaScript, and a backend framework.
-      </p>
-    </article>
-
-  <hr>
-
-  <footer>
-    <p>Built using javascript on css </p>
-  </footer>
-
+    <footer class="footer">
+      <p>&copy; 2026 Ayshum Kashif</p>
+    </footer>
+  </div>
 </body>
 </html>
