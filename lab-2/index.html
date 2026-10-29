@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab 2 — Responsive Navbar & Grid Drill</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for Icons (Cart & Hamburger) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+
+  <!-- ========================================== -->
+  <!-- RESPONSIVE NAVBAR                           -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Left: Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#" class="text-2xl font-bold tracking-tight text-indigo-600">
+            DevStore<span class="text-gray-900">.</span>
+          </a>
+        </div>
+
+        <!-- Center: Nav Links (Desktop >= 768px) -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#" class="text-indigo-600 hover:text-indigo-800 transition">Home</a>
+          <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Products</a>
+          <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Categories</a>
+          <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Deals</a>
+          <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Contact</a>
+        </nav>
+
+        <!-- Right: Cart Icon & Hamburger Button -->
+        <div class="flex items-center space-x-4">
+          <!-- Cart Icon -->
+          <a href="#" class="relative text-gray-700 hover:text-indigo-600 transition p-2" aria-label="Shopping Cart">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+            <span class="absolute top-1 right-1 bg-indigo-600 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">
+              3
+            </span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle (< 768px) -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            aria-expanded="false"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer (< 768px) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-2">
+      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-600 bg-indigo-50">Home</a>
+      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-indigo-600">Products</a>
+      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-indigo-600">Categories</a>
+      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-indigo-600">Deals</a>
+      <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-indigo-600">Contact</a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- MAIN CONTENT: RESPONSIVE PRODUCT GRID      -->
+  <!-- ========================================== -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">Featured Products</h1>
+      <p class="mt-2 text-sm text-gray-600">
+        Grid layout: 4 columns on Desktop (&ge;1024px), 2 columns on Tablet (&ge;640px), 1 column on Mobile (&lt;640px).
+      </p>
+    </div>
+
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Product Card 1 -->
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col">
+        <img src="https://via.placeholder.com/400x300/4f46e5/ffffff?text=Product+1" alt="Product 1" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Hardware</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-1">Mechanical Keyboard</h2>
+          <p class="text-sm text-gray-500 mt-2 flex-grow">RGB backlit hot-swappable tactile mechanical switches.</p>
+          <div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100">
+            <span class="text-lg font-bold text-gray-900">$129.99</span>
+            <button class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-lg transition">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col">
+        <img src="https://via.placeholder.com/400x300/0ea5e9/ffffff?text=Product+2" alt="Product 2" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Audio</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-1">Wireless Headphones</h2>
+          <p class="text-sm text-gray-500 mt-2 flex-grow">Active noise cancellation with 30-hour battery life.</p>
+          <div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100">
+            <span class="text-lg font-bold text-gray-900">$199.50</span>
+            <button class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-lg transition">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 3 -->
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col">
+        <img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Product+3" alt="Product 3" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Peripherals</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-1">Ergonomic Mouse</h2>
+          <p class="text-sm text-gray-500 mt-2 flex-grow">Precision optical tracking with custom macro buttons.</p>
+          <div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100">
+            <span class="text-lg font-bold text-gray-900">$59.99</span>
+            <button class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-lg transition">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 4 -->
+      <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition duration-200 flex flex-col">
+        <img src="https://via.placeholder.com/400x300/f59e0b/ffffff?text=Product+4" alt="Product 4" class="w-full h-48 object-cover" />
+        <div class="p-4 flex flex-col flex-grow">
+          <span class="text-xs font-semibold text-indigo-600 uppercase tracking-wider">Displays</span>
+          <h2 class="text-lg font-bold text-gray-900 mt-1">4K IPS Monitor</h2>
+          <p class="text-sm text-gray-500 mt-2 flex-grow">27-inch ultra-thin bezel display with 144Hz refresh rate.</p>
+          <div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100">
+            <span class="text-lg font-bold text-gray-900">$349.00</span>
+            <button class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-lg transition">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
