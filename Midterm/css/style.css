@@ -137,3 +137,7 @@ select:user-invalid + .error {
     grid-column: 2;                    /* message sits under the input */
   }
 }
+.banner-img {
+  max-height: 350px;
+  object-fit: cover;
+}
