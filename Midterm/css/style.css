@@ -75,3 +75,65 @@
   padding: .5rem 1rem;
 }
 .mega-mobile summary:hover { color: #fff; }
+
+/* ---------- Task 2: checkout form (BP = 661px, H = 67) ---------- */
+
+/* Mobile first: one column, labels above inputs */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+fieldset {
+  border: 2px solid hsl(67, 70%, 45%);
+  border-radius: .5rem;
+  padding: 1rem;
+  min-width: 0;
+}
+legend {
+  float: none;            /* undo Bootstrap's float so the legend sits on the border */
+  width: auto;
+  padding: 0 .5rem;
+  font-size: 1.1rem;
+  color: hsl(67, 70%, 35%);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr;   /* label above input */
+  gap: .25rem;
+  margin-bottom: 1rem;
+}
+
+/* Error message hidden until the user has interacted */
+.error {
+  display: none;
+  color: #dc3545;
+  font-size: .85rem;
+}
+
+/* :user-invalid only matches after interaction, so nothing shows on page load */
+input:user-invalid,
+select:user-invalid {
+  border: 2px solid #dc3545;
+}
+input:user-invalid + .error,
+select:user-invalid + .error {
+  display: block;
+}
+
+/* BP and wider: fieldsets side by side, labels in a left column */
+@media (min-width: 661px) {
+  .checkout-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .field {
+    grid-template-columns: 8rem 1fr;   /* label column | input column */
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .field .error {
+    grid-column: 2;                    /* message sits under the input */
+  }
+}
