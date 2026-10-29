@@ -1,0 +1,77 @@
+/* ---------- BP = 661px ---------- */
+
+/* navbar becomes the stacking context: sits above cards, hover effects, sticky bars */
+.category-bar {
+  position: relative;
+  z-index: 1040;
+}
+
+/* Re-create navbar-expand behaviour at 661px instead of Bootstrap's 768px */
+@media (min-width: 661px) {
+  .category-bar .navbar-toggler { display: none; }
+  .category-bar .navbar-collapse { display: flex !important; flex-basis: auto; }
+  .category-bar .navbar-nav { flex-direction: row; }
+  .category-bar .navbar-nav .nav-link {
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+  }
+  .menu-label { display: none; }
+}
+
+/* Which copy of the menu is visible */
+.mega-desktop { display: none; }
+@media (min-width: 661px) {
+  .mega-desktop { display: block; }
+  .mega-mobile  { display: none; }
+}
+
+/* Panel: hidden, out of flow, full width under the navbar */
+.mega-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 3px solid hsl(67, 70%, 45%);   /* accent: H = 67 */
+  box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .2);
+}
+
+/* invisible bridge so hover survives the gap between item and panel */
+.mega-panel::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -1rem;
+  height: 1rem;
+}
+
+/* K = 4 columns */
+.mega-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.mega-panel h3 { color: hsl(67, 70%, 45%); }
+.mega-panel a {
+  color: #212529;
+  text-decoration: none;
+  display: inline-block;
+  padding: .2rem 0;
+}
+.mega-panel a:hover,
+.mega-panel a:focus { text-decoration: underline; }
+
+/* Open on hover OR keyboard focus, BP and wider only */
+@media (min-width: 661px) {
+  .mega-item:hover .mega-panel,
+  .mega-item:focus-within .mega-panel { display: block; }
+}
+
+/* Mobile accordion */
+.mega-mobile summary {
+  color: rgba(255, 255, 255, .75);
+  cursor: pointer;
+  padding: .5rem 1rem;
+}
+.mega-mobile summary:hover { color: #fff; }

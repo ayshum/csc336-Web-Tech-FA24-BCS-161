@@ -27,7 +27,9 @@
   </header>
 
     <!-- Category navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark category-bar">
+     <nav class="navbar navbar-dark category-bar">
+  <div class="container">
+    <span class="navbar-brand menu-label">Menu</span>
     <div class="container">
       <span class="navbar-brand d-md-none">Menu</span>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#categoryMenu">
@@ -40,6 +42,92 @@
           <li class="nav-item"><a class="nav-link" href="#cookies">Cookies</a></li>
           <li class="nav-item"><a class="nav-link" href="#shakes">Ice Cream Shakes</a></li>
         </ul>
+        <!-- BP and wider: mega-menu (K = 4) -->
+<li class="nav-item mega-item mega-desktop">
+  <button type="button" class="nav-link">Shop by Category</button>
+
+  <div class="mega-panel">
+    <div class="container py-4">
+      <div class="mega-cols">
+
+        <div>
+          <h3 class="h6 text-uppercase">Cookies</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#cookies">Snickers Crunch</a></li>
+            <li><a href="#cookies">Chocolate Filled Hazelnut</a></li>
+            <li><a href="#cookies">Red Velvet</a></li>
+            <li><a href="#cookies">Lotus Lava</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="h6 text-uppercase">Crumble Cold</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#crumble-cold">Happy Camper</a></li>
+            <li><a href="#crumble-cold">Sunshine Sipper</a></li>
+            <li><a href="#crumble-cold">EZ Breezy</a></li>
+            <li><a href="#crumble-cold">Lime &amp; Dandy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="h6 text-uppercase">Shakes</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#shakes">Cookies N Cream Shake</a></li>
+            <li><a href="#shakes">Strawberry Shake</a></li>
+            <li><a href="#shakes">All Ice Cream Shakes</a></li>
+            <li><a href="#monthly-drop">Monthly Drop</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="h6 text-uppercase">Browse Menu</h3>
+          <ul class="list-unstyled mb-0">
+            <li><a href="#monthly-drop">Monthly Drop</a></li>
+            <li><a href="#crumble-cold">Crumble Cold</a></li>
+            <li><a href="#cookies">Cookies</a></li>
+            <li><a href="#shakes">Ice Cream Shakes</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</li>
+
+<!-- Below BP: accordion inside the hamburger menu -->
+<li class="nav-item mega-mobile">
+  <span class="nav-link pb-0">Shop by Category</span>
+
+  <details>
+    <summary>Cookies</summary>
+    <ul class="list-unstyled ps-3">
+      <li><a class="nav-link" href="#cookies">Snickers Crunch</a></li>
+      <!-- Hazelnut, Red Velvet, Lotus Lava: same pattern -->
+    </ul>
+  </details>
+
+  <details>
+    <summary>Crumble Cold</summary>
+    <ul class="list-unstyled ps-3">
+      <!-- 4 drink links -->
+    </ul>
+  </details>
+
+  <details>
+    <summary>Shakes</summary>
+    <ul class="list-unstyled ps-3">
+      <!-- 4 links -->
+    </ul>
+  </details>
+
+  <details>
+    <summary>Browse Menu</summary>
+    <ul class="list-unstyled ps-3">
+      <!-- 4 section links -->
+    </ul>
+  </details>
+</li>
       </div>
     </div>
   </nav>
